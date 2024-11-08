@@ -129,9 +129,11 @@ header p {
 }
 
 /* Footer Styling */
+/* Footer Styling con velo azul y detalles en rojo */
 footer {
-    background: rgba(0, 47, 30, 0.8); /* Verde oscuro semi-transparente */
-    color: #FFFFFF;
+    position: relative;
+    background-color: rgba(0, 0, 128, 0.7); /* Velo azul semi-transparente */
+    color: #FFFFFF; /* Texto en blanco */
     padding: 20px;
     text-align: center;
     display: grid;
@@ -139,15 +141,30 @@ footer {
     gap: 20px;
 }
 
+/* Color rojo para títulos o enlaces dentro del footer */
 .footer-section h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
-    color: #FFD700; /* Dorado del logo */
+    color: #FF0000; /* Rojo para títulos o encabezados */
 }
 
-.footer-social-icons img {
-    width: 25px;
-    margin: 5px;
+footer a {
+    color: #FF0000; /* Rojo para enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer a:hover {
+    color: #FFA07A; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para el logo en el footer */
+.footer-logo {
+    margin: 10px 0;
+}
+
+.footer-logo img {
+    max-width: 100px; /* Ajusta el tamaño según tu diseño */
+    height: auto;
 }
 
 /* Estilos de enlaces en el pie de página */
