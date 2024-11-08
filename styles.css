@@ -6,16 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('images/fondo-catalogo.jpg'); /* Fondo anterior */
+    background-size: cover;
+    background-attachment: fixed;
     color: #333;
-    padding: 10px;
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    background: #00796b;
-    color: #fff;
+    background-color: #024731; /* Verde oscuro del logo */
+    color: #FFD700; /* Dorado del logo */
     padding: 20px 0;
 }
 
@@ -32,10 +33,12 @@ header {
 
 h1 {
     font-size: 1.8rem;
+    color: #FFD700;
 }
 
 header p {
     font-size: 1rem;
+    color: #FFFFFF;
 }
 
 /* Catalog Styling */
@@ -47,9 +50,9 @@ header p {
 }
 
 .product {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 20px;
 }
@@ -62,6 +65,7 @@ header p {
 
 .product h2 {
     font-size: 1.2rem;
+    color: #024731;
     margin: 10px 0;
 }
 
@@ -71,8 +75,8 @@ header p {
 }
 
 .whatsapp-btn {
-    background: #25d366;
-    color: #fff;
+    background: #25D366; /* Verde WhatsApp */
+    color: #FFFFFF;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -87,8 +91,8 @@ header p {
 
 /* Footer Styling */
 footer {
-    background: #004d40;
-    color: #fff;
+    background: rgba(0, 47, 30, 0.8); /* Verde oscuro semi-transparente */
+    color: #FFFFFF;
     padding: 20px;
     text-align: center;
     display: grid;
@@ -99,6 +103,7 @@ footer {
 .footer-section h3 {
     font-size: 1.1rem;
     margin-bottom: 10px;
+    color: #FFD700; /* Dorado del logo */
 }
 
 .footer-social-icons img {
@@ -116,3 +121,4 @@ footer {
         font-size: 0.9rem;
     }
 }
+
