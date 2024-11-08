@@ -121,4 +121,15 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* Selecciona todos los enlaces dentro del pie de página */
+footer a {
+    color: inherit; /* Mantiene el color del texto del pie de página */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Agrega un estilo para cuando el usuario pasa el ratón por encima del enlace */
+footer a:hover {
+    color: inherit; /* Puedes cambiar el color si deseas */
+    text-decoration: none; /* Mantiene el subrayado desactivado al pasar el cursor */
+}
 
