@@ -6,12 +6,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('images/watermark.png'); /* Fondo anterior */
-    background-size: cover;
-    background-attachment: fixed;
-    color: #333;
-}
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 10px;
+        background-image: url('images/textura.png'); /* Textura de fondo */
+        background-repeat: repeat; /* Repetir la textura en todo el fondo */
+        background-size: 200px 200px; /* Tamaño del patrón */
+    }
 
 /* Header Styling con Imagen de Fondo y Velo Oscuro */
 header {
@@ -21,10 +23,8 @@ header {
     background-image: url('images/header-background.png');
     background-size: cover;
     background-position: center;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     color: #ffffff; /* Texto blanco para mejor contraste */
-    padding: 40px 20px;
-    overflow: hidden;
 }
 
 
@@ -34,15 +34,13 @@ header::before {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de opacidad del velo */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura para mejorar el contraste */
     z-index: 1;
 }
 
-header .logo-container,
-header h1,
-header p {
+header .logo-container{
     bottom: 20px;
     width: 100%;
     text-align: center;
@@ -51,24 +49,25 @@ header p {
     z-index: 2; /* Asegura que el contenido esté sobre el velo */
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
 .logo-wrapper {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
     padding: 10px;
     border-radius: 8px; /* Borde redondeado para darle estilo */
-.logo-container img {
-    height: 60px;
+/* Logo principal de Deli Global Food */
+.logo-primary {
+    width: 150px; /* Aumentar tamaño del logo principal */
+    margin-right: 20px;
 }
 
-h1 {
-    font-size: 1.8rem;
-    color: #FFD700;
+/* Logo secundario de la empresa aliada */
+.logo-secondary {
+    width: 150px; /* Tamaño más pequeño para el logo secundario */
+}
+header h1 {
+    margin-top: 15px;
+    font-size: 2.5em;
+    color: #ffffff;
 }
 
 header p {
@@ -104,9 +103,9 @@ header p {
 }
 
 .product h2 {
-    font-size: 1.2rem;
-    color: #024731;
-    margin: 10px 0;
+    color: #e74c3c; /* Rojo para los títulos de los productos */
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .description {
