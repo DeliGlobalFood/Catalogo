@@ -163,6 +163,34 @@ button:hover {
     background-color: #e74c3c; /* Rojo en hover */
 }
 
+/* Media Queries para pantallas más grandes (tablets y computadoras) */
+@media (min-width: 600px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalog {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
 /* Estilos para la sección de precios */
 .pricing {
     margin-top: 10px;
@@ -213,9 +241,10 @@ a {
 .pricing p strong {
     color: #FFD700; /* Color dorado para palabras clave (como Precio) */
 }
+/* Footer Styling con velo azul y texto en blanco */
 footer {
     position: relative;
-    background-color: rgba(0, 0, 128, 0.7); /* Velo azul semi-transparente */
+    background-color: rgba(0, 51, 153, 0.7); /* Velo azul semi-transparente */
     color: #FFFFFF; /* Texto en blanco */
     padding: 20px;
     text-align: center;
@@ -257,26 +286,6 @@ footer a:hover {
     object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
 }
 
-/* Estilos de enlaces en el pie de página */
-footer a {
-    color: inherit; /* Mantiene el color del texto del pie de página */
-    text-decoration: none; /* Quita el subrayado */
-}
 
-footer a:hover {
-    color: inherit; /* Puedes cambiar el color si deseas */
-    text-decoration: none; /* Mantiene el subrayado desactivado al pasar el cursor */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .catalog {
-        grid-template-columns: 1fr;
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-}
 
 
