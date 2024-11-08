@@ -1,11 +1,12 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
+    body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         color: #333;
@@ -14,21 +15,21 @@ body {
         background-repeat: repeat; /* Repetir la textura en todo el fondo */
         background-size: 200px 200px; /* Tamaño del patrón */
     }
+    
+}
 
-/* Header Styling con Imagen de Fondo y Velo Oscuro */
+/* Estilos del header */
 header {
-    /* Aumenta la especificidad del selector para aplicarlo con prioridad */
     position: relative;
     height: 300px; /* Ajusta la altura según la imagen */
-    background-image: url('images/header-background.png');
+    background-image: url('images/header-background.png'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff; /* Texto blanco para mejor contraste */
 }
 
-
-/* Velo oscuro sobre la imagen de fondo */
+/* Capa oscura sobre la imagen para mejorar legibilidad */
 header::before {
     content: '';
     position: absolute;
@@ -40,20 +41,23 @@ header::before {
     z-index: 1;
 }
 
-header .logo-container{
+/* Contenedor para los logos y texto */
+header .content {
+    position: absolute;
     bottom: 20px;
     width: 100%;
     text-align: center;
     z-index: 2; /* Por encima de la capa oscura */
-    position: relative;
-    z-index: 2; /* Asegura que el contenido esté sobre el velo */
 }
 
+/* Fondo o sombra detrás de los logos para mejorar el contraste */
 .logo-wrapper {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
     padding: 10px;
     border-radius: 8px; /* Borde redondeado para darle estilo */
+}
+
 /* Logo principal de Deli Global Food */
 .logo-primary {
     width: 150px; /* Aumentar tamaño del logo principal */
@@ -62,25 +66,29 @@ header .logo-container{
 
 /* Logo secundario de la empresa aliada */
 .logo-secondary {
-    width: 150px; /* Tamaño más pequeño para el logo secundario */
+    width: 80px; /* Tamaño más pequeño para el logo secundario */
+    opacity: 0.7; /* Menos prominente */
 }
+
+/* Texto del título */
 header h1 {
     margin-top: 15px;
     font-size: 2.5em;
     color: #ffffff;
 }
 
+/* Lema o subtítulo */
 header p {
-    font-size: 1rem;
-    color: #FFFFFF;
+    font-size: 1.2em;
+    color: #ffffff;
 }
 
-/* Catalog Styling */
+
 .catalog {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .product {
@@ -97,10 +105,13 @@ header p {
 }
 
 .product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%;  /* Hacer que las imágenes ocupen el 100% del contenedor */
+    max-width: 500px;  /* Tamaño máximo de las imágenes */
+    height: auto;  /* Mantener la proporción */
+    display: block;
+    margin: 0 auto;  /* Centrar las imágenes */
 }
+
 
 .product h2 {
     color: #e74c3c; /* Rojo para los títulos de los productos */
@@ -108,28 +119,128 @@ header p {
     margin-bottom: 10px;
 }
 
-.description {
-    font-size: 0.9rem;
-    color: #555;
+.product .description {
+    font-size: 0.9em;
+    color: #000000; /* Texto negro para mejor contraste */
 }
 
-.whatsapp-btn {
-    background: #25D366; /* Verde WhatsApp */
-    color: #FFFFFF;
-    padding: 10px 15px;
+.product .code {
+    font-size: 0.8em;
+    color: #555555; /* Gris oscuro */
+}
+
+.product:hover {
+    border-color: #e74c3c; /* Resalta en rojo al pasar el mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 4px solid #0044cc; /* Azul del logo */
+}
+
+footer p {
+    font-size: 0.8em;
+    color: #333333; /* Texto más oscuro para legibilidad */
+}
+
+/* Botones - Si decides agregar botones para acciones futuras */
+button {
+    background-color: #0044cc; /* Azul del logo */
+    color: #ffffff;
     border: none;
+    padding: 10px 20px;
+    font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e74c3c; /* Rojo en hover */
+}
+
+/* Media Queries para pantallas más grandes (tablets y computadoras) */
+@media (min-width: 600px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalog {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+/* Estilos para la sección de precios */
+.pricing {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333333;
+}
+
+.pricing p {
+    margin: 5px 0;
+}
+.whatsapp-btn {
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
     margin-top: 10px;
 }
 
 .whatsapp-btn:hover {
-    background: #1ebe58;
+    background-color: #128C7E; /* Oscurecer el verde en hover */
 }
 
-/* Footer Styling */
-/* Footer Styling con velo azul y detalles en rojo */
+a {
+    text-decoration: none; /* Para que no subraye el texto del enlace */
+}
+/* Estilos para la sección de precios */
+.pricing {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #0044cc; /* Fondo azul del logo */
+    color: #ffffff; /* Texto en blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    font-size: 1em;
+}
+
+.pricing p {
+    margin: 5px 0;
+    font-weight: bold; /* Texto en negrita para destacar */
+    font-size: 1.5em; /* Aumentar tamaño de letra */
+}
+
+.pricing p strong {
+    color: #FFD700; /* Color dorado para palabras clave (como Precio) */
+
 footer {
     position: relative;
     background-color: rgba(0, 0, 128, 0.7); /* Velo azul semi-transparente */
