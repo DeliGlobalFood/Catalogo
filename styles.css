@@ -270,12 +270,21 @@ footer a:hover {
 
 /* Estilos para el logo en el footer */
 .footer-logo {
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Limita el ancho al contenedor */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    padding: 10px 0;
 }
 
 .footer-logo img {
-    max-width: 100px; /* Ajusta el tamaño según tu diseño */
-    height: auto;
+    max-width: 100px; /* Limita el tamaño máximo del logo */
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
+}
+
 }
 
 /* Estilos de enlaces en el pie de página */
