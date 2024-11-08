@@ -241,7 +241,6 @@ a {
 .pricing p strong {
     color: #FFD700; /* Color dorado para palabras clave (como Precio) */
 }
-/* Footer Styling con velo azul y texto en blanco */
 footer {
     position: relative;
     background-color: rgba(0, 51, 153, 0.7); /* Velo azul semi-transparente */
