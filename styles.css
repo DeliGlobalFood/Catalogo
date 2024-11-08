@@ -17,7 +17,7 @@ body {
 header {
     position: relative;
     text-align: center;
-    background-image: url('images/fondo-catalogo.jpg'); /* Cambia la ruta según tu imagen */
+    background-image: url('images/header-background.png'); /* Cambia la ruta según tu imagen */
     background-size: cover;
     background-position: center;
     color: #FFD700; /* Dorado del logo */
