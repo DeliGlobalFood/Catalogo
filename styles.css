@@ -14,16 +14,17 @@ body {
 }
 
 /* Header Styling con Imagen de Fondo y Velo Oscuro */
-header {
+body header {
+    /* Aumenta la especificidad del selector para aplicarlo con prioridad */
     position: relative;
-    text-align: center;
-    background-image: url('images/header-background.png'); /* Cambia la ruta según tu imagen */
+    background-image: url('images/header-background.png');
     background-size: cover;
     background-position: center;
-    color: #FFD700; /* Dorado del logo */
+    color: #FFD700;
     padding: 40px 20px;
     overflow: hidden;
 }
+
 
 /* Velo oscuro sobre la imagen de fondo */
 header::before {
