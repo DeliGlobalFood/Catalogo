@@ -4,18 +4,14 @@
     box-sizing: border-box;
 }
 
-
 body {
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        padding: 10px;
-        background-image: url('images/textura.png'); /* Textura de fondo */
-        background-repeat: repeat; /* Repetir la textura en todo el fondo */
-        background-size: 200px 200px; /* Tamaño del patrón */
-    }
-    
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    background-image: url('images/textura.png'); /* Textura de fondo */
+    background-repeat: repeat; /* Repetir la textura en todo el fondo */
+    background-size: 200px 200px; /* Tamaño del patrón */
 }
 
 /* Estilos del header */
@@ -83,10 +79,9 @@ header p {
     color: #ffffff;
 }
 
-
 .catalog {
     display: grid;
-    grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta al tamaño del contenedor */
     gap: 15px;
     margin-top: 20px;
 }
@@ -101,7 +96,8 @@ header p {
     background-image: url('images/watermark.png'); /* Fondo minimalista de ramen */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 82% ; /* Tamaño de la marca de agua en cada producto */
+    background-size: 82%; /* Tamaño de la marca de agua en cada producto */
+    margin-bottom: 20px; /* Asegura espacio debajo de cada producto */
 }
 
 .product img {
@@ -111,7 +107,6 @@ header p {
     display: block;
     margin: 0 auto;  /* Centrar las imágenes */
 }
-
 
 .product h2 {
     color: #e74c3c; /* Rojo para los títulos de los productos */
@@ -191,36 +186,7 @@ button:hover {
         font-size: 2.5em;
     }
 }
-/* Estilos para la sección de precios */
-.pricing {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #333333;
-}
 
-.pricing p {
-    margin: 5px 0;
-}
-.whatsapp-btn {
-    background-color: #25D366; /* Color verde de WhatsApp */
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.whatsapp-btn:hover {
-    background-color: #128C7E; /* Oscurecer el verde en hover */
-}
-
-a {
-    text-decoration: none; /* Para que no subraye el texto del enlace */
-}
 /* Estilos para la sección de precios */
 .pricing {
     margin-top: 10px;
@@ -241,6 +207,28 @@ a {
 .pricing p strong {
     color: #FFD700; /* Color dorado para palabras clave (como Precio) */
 }
+
+.whatsapp-btn {
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Oscurecer el verde en hover */
+}
+
+a {
+    text-decoration: none; /* Para que no subraye el texto del enlace */
+}
+
 footer {
     position: relative;
     background-color: rgba(0, 51, 153, 0.7); /* Velo azul semi-transparente */
@@ -284,7 +272,3 @@ footer a:hover {
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
 }
-
-
-
-
